@@ -44,6 +44,12 @@ void MainWindow::createActions()
     connect(ui->actionE_xit, SIGNAL(triggered()), this, SLOT(close()));
 
     //the "edit" on menu
+    connect(ui->actionCu_t, SIGNAL(triggered()), spreadsheet, SLOT(cut()));
+    connect(ui->action_Copy, SIGNAL(triggered()), spreadsheet, SLOT(copy()));
+    connect(ui->action_Paste, SIGNAL(triggered()), spreadsheet, SLOT(paste()));
+    connect(ui->action_Delete, SIGNAL(triggered()), spreadsheet, SLOT(del()));
+    connect(ui->action_Column, SIGNAL(triggered()), spreadsheet, SLOT(selectCurrentColumn()));
+    connect(ui->action_Row, SIGNAL(triggered()), spreadsheet, SLOT(selectCurrentRow()));
     connect(ui->action_All, SIGNAL(triggered()), spreadsheet, SLOT(selectAll()));
     connect(ui->action_Find, SIGNAL(triggered()), this, SLOT(find()));
     connect(ui->action_Go_To_Cell, SIGNAL(triggered()), this, SLOT(goToCell()));
