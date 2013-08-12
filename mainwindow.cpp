@@ -55,7 +55,7 @@ void MainWindow::createActions()
     connect(ui->action_Go_To_Cell, SIGNAL(triggered()), this, SLOT(goToCell()));
 
     //the "option" on menu
-    connect(ui->action_Show_Grid, SIGNAL(triggered(bool)), spreadsheet, SLOT(setshowGrid(bool)));
+    connect(ui->action_Show_Grid, SIGNAL(triggered(bool)), spreadsheet, SLOT(setShowGrid(bool)));
 
     //the "help" on menu
     connect(ui->action_About, SIGNAL(triggered()), this, SLOT(about()));
@@ -68,6 +68,8 @@ void MainWindow::createMenus()
     separatorAction = ui->menu_File->addSeparator();
     for(int i = 0; i != MaxRecentFiles; ++i)
         ui->menu_File->addAction(recentFileActions[i]);
+    ui->menu_File->addSeparator();
+    ui->menu_File->addAction(ui->actionE_xit);
 }
 
 void MainWindow::createcontexMenu()

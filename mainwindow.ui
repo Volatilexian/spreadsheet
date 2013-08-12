@@ -24,7 +24,7 @@
      <x>0</x>
      <y>0</y>
      <width>633</width>
-     <height>26</height>
+     <height>22</height>
     </rect>
    </property>
    <property name="font">
@@ -40,8 +40,6 @@
     <addaction name="action_Open"/>
     <addaction name="action_Save"/>
     <addaction name="actionSave_As"/>
-    <addaction name="separator"/>
-    <addaction name="actionE_xit"/>
    </widget>
    <widget class="QMenu" name="menu_Edit">
     <property name="title">
