@@ -48,7 +48,7 @@ QString Spreadsheet::formula(int row, int column) const
 {
     Cell *c = cell(row, column);
     if(c)
-        return c->formula();
+        return c->formula();//this function "formula" belongs to the Cell
     else
         return "";
 }
@@ -56,12 +56,12 @@ QString Spreadsheet::formula(int row, int column) const
 void Spreadsheet::setFormula(int row, int column, const QString &formula)
 {
     Cell *c = cell(row, column);
-    if(!c)
+    if(!c)//if this cell is not exist
     {
         c = new Cell;
         setItem(row, column, c);
     }
-    c->setFormula(formula);
+    c->setFormula(formula);//this function "setFormula" belongs to the Cell
 }
 
 QString Spreadsheet::currentLocation() const

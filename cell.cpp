@@ -39,7 +39,7 @@ QVariant Cell::data(int role) const
         if(value().isValid())
             return value().toString();
         else
-            return "####";
+            return "####";//how can it run to here???
     }
     else if(role == Qt::TextAlignmentRole)
     {
@@ -144,7 +144,7 @@ QVariant Cell::evalFactor(const QString &str, int &pos) const
     QVariant result;
     bool negative = false;
 
-    if(str[pos] == '-')
+    if(str[pos] == '-')//test the negative sign befor the formula
     {
         negative = true;
         ++pos;
@@ -167,7 +167,7 @@ QVariant Cell::evalFactor(const QString &str, int &pos) const
             token +=str[pos];
             ++pos;
         }
-        if(regExp.exactMatch(token))
+        if(regExp.exactMatch(token))//test the token is a integer or a unit
         {
             int column = token[0].toUpper().unicode() - 'A';
             int row = token.mid(1).toInt() - 1;
