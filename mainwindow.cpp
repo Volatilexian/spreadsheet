@@ -27,6 +27,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+//link the slot to the action which in ui
 void MainWindow::createActions()
 {
     //the "file" on menu
@@ -54,8 +55,13 @@ void MainWindow::createActions()
     connect(ui->action_Find, SIGNAL(triggered()), this, SLOT(find()));
     connect(ui->action_Go_To_Cell, SIGNAL(triggered()), this, SLOT(goToCell()));
 
+    //the "tool" on menu
+    connect(ui->action_Sort, SIGNAL(triggered()), this, SLOT(sort()));
+    connect(ui->action_Recalculate, SIGNAL(triggered()), spreadsheet, SLOT(recalculate()));
+
     //the "option" on menu
     connect(ui->action_Show_Grid, SIGNAL(triggered(bool)), spreadsheet, SLOT(setShowGrid(bool)));
+    connect(ui->action_Auto_Recalculate, SIGNAL(triggered(bool)), spreadsheet, SLOT(setAutoRecalculate(bool)));
 
     //the "help" on menu
     connect(ui->action_About, SIGNAL(triggered()), this, SLOT(about()));

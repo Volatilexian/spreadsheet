@@ -10,7 +10,7 @@ Spreadsheet::Spreadsheet(QTableWidget *parent) :
     setItemPrototype(new Cell);//where is the place of the function define
     setSelectionMode(ContiguousSelection);//like up
 
-    connect(this, SIGNAL(), this, SLOT(somethingChanged()));
+    connect(this, SIGNAL(itemChanged(QTableWidgetItem*)), this, SLOT(somethingChanged()));
 
     clear();
 }
