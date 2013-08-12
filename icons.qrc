@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>icons/title.jpg</file>
+        <file>icons/save.JPG</file>
+        <file>icons/new.JPG</file>
+        <file>icons/open.JPG</file>
+        <file>icons/paste.JPG</file>
+        <file>icons/copy.JPG</file>
+        <file>icons/cut.JPG</file>
+        <file>icons/find.JPG</file>
+        <file>icons/gotocell.JPG</file>
+    </qresource>
+</RCC>
